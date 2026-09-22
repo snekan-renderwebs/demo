@@ -1,0 +1,18 @@
+-- AlterTable
+ALTER TABLE "User" ADD COLUMN     "address" TEXT,
+ADD COLUMN     "cgpa" TEXT,
+ADD COLUMN     "city" TEXT,
+ADD COLUMN     "college" TEXT,
+ADD COLUMN     "course" TEXT,
+ADD COLUMN     "dateOfBirth" TEXT,
+ADD COLUMN     "department" TEXT,
+ADD COLUMN     "gender" TEXT,
+ADD COLUMN     "graduationYear" TEXT,
+ADD COLUMN     "identityProofPath" TEXT,
+ADD COLUMN     "pincode" TEXT,
+ADD COLUMN     "qualification" TEXT,
+ADD COLUMN     "resumePath" TEXT,
+ADD COLUMN     "state" TEXT,
+ADD COLUMN     "tenthPercentage" TEXT,
+ADD COLUMN     "termsAccepted" BOOLEAN NOT NULL DEFAULT false,
+ADD COLUMN     "twelfthPercentage" TEXT;

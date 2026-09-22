@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String   @id @default(cuid())
+  name              String
+  email             String   @unique
+  password          String
+  phone             String?
+  role              String   @default("staff")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  address           String?
+  cgpa              String?
+  city              String?
+  college           String?
+  course            String?
+  dateOfBirth       String?
+  department        String?
+  gender            String?
+  graduationYear    String?
+  identityProofPath String?
+  pincode           String?
+  qualification     String?
+  resumePath        String?
+  state             String?
+  tenthPercentage   String?
+  termsAccepted     Boolean  @default(false)
+  twelfthPercentage String?
+}
